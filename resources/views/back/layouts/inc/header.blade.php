@@ -119,10 +119,10 @@
             <a href="#" class="dropdown-item">Feedback</a>
             <div class="dropdown-divider"></div>
             <a href="./settings.html" class="dropdown-item">Settings</a>
-            @auth
+            
               <a href="{{ route('author.logout') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
             <form action="{{ route('author.logout') }}" id="logout-form" method="post">@csrf</form> 
-            @endauth
+            
              
           </div>
         </div>
