@@ -23,5 +23,10 @@ Route::prefix('author')->name('author.')->group(function(){
     });
     Route::middleware(['author:web'])->group(function(){
       Route::get('/home',[AuthorController::class,'index'])->name('home');
+      Route::post('/logout', [App\Http\Controllers\AuthorController::class, 'logout'])->name('logout');
+
+      
     });
+
+    
 });
