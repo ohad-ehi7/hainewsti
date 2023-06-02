@@ -5,6 +5,14 @@
         </div>
       
     @endif
+
+    @if(Session::get('success'))
+        <div class="alert alert-success">
+            {!!session()->get('success')!!}
+        </div>
+      
+    @endif
+
     <div class="card card-md">
     <div class="card-body">
       <h2 class="h2 text-center mb-4">Login to your account</h2>
