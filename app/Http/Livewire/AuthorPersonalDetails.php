@@ -19,29 +19,28 @@ class AuthorPersonalDetails extends Component
 
     public function UpdateDetails(){
 // Valider les champs du formulaire
-$this->validate([
-    'name' => 'required|string',
-    'username' => 'required|unique:users,username,'.auth('web')->id()
-    
-]);
-User::where('id', auth('web')->id())->update([
-    'name' => $this->name,
-    'username' => $this->username,
-    'biography' => $this->biography
-]);
-$this->emit('updateAuthorProfileHeader');
-$this->emit('updateTopHeader');
+        $this->validate([
+        'name' => 'required|string',
+        'username' => 'required|unique:users,username,'.auth('web')->id()
 
-$this->showToast('Your Profile info has been successfully updated.', 'success');
-    
-}
-    public function showToastr($message,$type){
+        ]);
+        User::where('id', auth('web')->id())->update([
+        'name' => $this->name,
+        'username' => $this->username,
+        'biography' => $this->biography
+        ]);
+
+        $this->showToast('Your Profile info has been successfully updated', 'success');
+        $this->emit('updateAuthorProfileHeader');
+        $this->emit('updateTopHeader');
+       }
+    public function showToast($message, $type){
         return $this->dispatchBrowserEvent('showToast',[
             'type'=>$type,
             'message'=>$message
+            
         ]);
-
-    }
+        }
     public function render()
     {
         return view('livewire.author-personal-details');

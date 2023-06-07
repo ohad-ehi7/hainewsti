@@ -12,8 +12,7 @@
     <link href="{{asset('/back/dist/css/tabler-flags.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/dist/css/tabler-payments.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/back/dist/css/tabler-vendors.min.css')}}" rel="stylesheet"/>
-    {{-- <link rel="stylesheet" href="{{ asset('/back/dist/libs/toastr/ijabo.min.css') }}"> --}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('/back/dist/libs/toastr/toastr.css') }}">
 
     @stack('stylesheets')
     @livewireStyles
@@ -1418,7 +1417,9 @@
     
     <!-- Libs JS -->
     <script src="{{ asset('/back/dist/libs/jquery/jquery-3.6.0.min.js') }}"></script>
-    {{-- <script src="{{ asset('/back/dist/libs/toastr/ijabo.min.js') }}"></script> --}}
+    <script src="{{ asset('/back/dist/libs/toastr/toastr.js') }}"></script>
+    <script src="{{ asset('/back/dist/libs/toastr/toastr.min.js') }}"></script>
+
 
     <script src="{{ asset('/back/dist/libs/apexcharts/dist/apexcharts.min.js') }}" defer></script>
     <script src="{{ asset('/back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js') }}" defer></script>
@@ -1429,8 +1430,7 @@
     <!-- Tabler Core -->
     <script src="{{ asset('/back/dist/js/tabler.min.js')}}" defer></script>
     <script src="{{ asset('/back/dist/js/demo.min.js')}}" defer></script>
-     <!-- Inclure la bibliothèque toastr -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+     
 
 <script>
   window.addEventListener('showToastr', function(event) {
