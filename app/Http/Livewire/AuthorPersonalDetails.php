@@ -30,17 +30,17 @@ class AuthorPersonalDetails extends Component
         'biography' => $this->biography
         ]);
 
-        $this->showToast('Your Profile info has been successfully updated', 'success');
+        // $this->showToast('Your Profile info has been successfully updated', 'Success');
         $this->emit('updateAuthorProfileHeader');
         $this->emit('updateTopHeader');
        }
-    public function showToast($message, $type){
-        return $this->dispatchBrowserEvent('showToast',[
-            'type'=>$type,
-            'message'=>$message
+    // public function showToast($message, $type){
+    //     return $this->dispatchBrowserEvent('showToast',[
+    //         'type'=>$type,
+    //         'message'=>$message
             
-        ]);
-        }
+    //     ]);
+    //     }
     public function render()
     {
         return view('livewire.author-personal-details');

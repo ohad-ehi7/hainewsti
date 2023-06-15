@@ -12,8 +12,8 @@
     <link href="{{asset('/back/dist/css/tabler-flags.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/dist/css/tabler-payments.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/back/dist/css/tabler-vendors.min.css')}}" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ asset('/back/dist/libs/toastr/toastr.css') }}">
-
+    
+     
     @stack('stylesheets')
     @livewireStyles
     <link href="{{asset('/back/dist/css/demo.min.css')}}" rel="stylesheet"/>
@@ -1415,10 +1415,7 @@
       </div>
     </div>
     
-    <!-- Libs JS -->
-    <script src="{{ asset('/back/dist/libs/jquery/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/back/dist/libs/toastr/toastr.js') }}"></script>
-    <script src="{{ asset('/back/dist/libs/toastr/toastr.min.js') }}"></script>
+    
 
 
     <script src="{{ asset('/back/dist/libs/apexcharts/dist/apexcharts.min.js') }}" defer></script>
@@ -1432,7 +1429,7 @@
     <script src="{{ asset('/back/dist/js/demo.min.js')}}" defer></script>
      
 
-<script>
+ <script>
   window.addEventListener('showToastr', function(event) {
     toastr.remove();
     if (event.details.type === 'info') {
@@ -1447,7 +1444,24 @@
       return false;
     }
   });
+</script> 
+<script>
+  window.addEventListener('showToastr', function(event) {
+    toastr.remove();
+    if (event.detail.type === 'info') {
+      toastr.info(event.detail.message);
+    } else if (event.detail.type === 'success') {
+      toastr.success(event.detail.message);
+    } else if (event.detail.type === 'error') {
+      toastr.error(event.detail.message);
+    } else if (event.detail.type === 'warning') {
+      toastr.warning(event.detail.message);
+    } else {
+      return false;
+    }
+  });
 </script>
+
 
 
   </body>
