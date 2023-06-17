@@ -9,12 +9,13 @@ class TopHeader extends Component
 {
     public $author;
 
-    protected $listerners =[
-        'updateTopHeader'=>'$refresh'
-    
-        ];
-    public function mount(){
-        $this->author= User::find(auth('web')->id());
+    protected $listeners = [
+        'updateTopHeader' => '$refresh'
+
+    ];
+    public function mount()
+    {
+        $this->author = User::find(auth('web')->id());
     }
     public function render()
     {

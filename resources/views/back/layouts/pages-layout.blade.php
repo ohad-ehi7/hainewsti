@@ -12,6 +12,10 @@
     <link href="{{asset('/back/dist/css/tabler-flags.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/dist/css/tabler-payments.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('/back/dist/css/tabler-vendors.min.css')}}" rel="stylesheet"/>
+     <link href="{{asset('/back/dist/css/toastr/toastr.min.css')}}" rel="stylesheet"/> 
+
+    
+
     
      
     @stack('stylesheets')
@@ -1417,9 +1421,12 @@
     
     
 
+    <script src="{{ asset('/back/dist/libs/jquery/jquery-3.6.0.min.js') }}" defer></script>
+    <link href="{{asset('/back/dist/css/toastr/toastr.min.js')}}" rel="stylesheet"/> 
 
+    
     <script src="{{ asset('/back/dist/libs/apexcharts/dist/apexcharts.min.js') }}" defer></script>
-    <script src="{{ asset('/back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js') }}" defer></script>
+    <script src="{{ asset('/back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js') }}" defer></scrip>
     <script src="{{ asset('/back/dist/libs/jsvectormap/dist/maps/world.js') }}" defer></script>
     <script src="{{ asset('/back/dist/libs/jsvectormap/dist/maps/world-merc.js') }}" defer></script>
     @stack('scripts')
@@ -1429,38 +1436,23 @@
     <script src="{{ asset('/back/dist/js/demo.min.js')}}" defer></script>
      
 
- <script>
-  window.addEventListener('showToastr', function(event) {
-    toastr.remove();
-    if (event.details.type === 'info') {
-      toastr.info(event.details.message);
-    } else if (event.details.type === 'success') {
-      toastr.success(event.details.message);
-    } else if (event.details.type === 'error') {
-      toastr.error(event.details.message);
-    } else if (event.details.type === 'warning') {
-      toastr.warning(event.details.message);
-    } else {
-      return false;
-    }
-  });
-</script> 
-<script>
-  window.addEventListener('showToastr', function(event) {
-    toastr.remove();
-    if (event.detail.type === 'info') {
-      toastr.info(event.detail.message);
-    } else if (event.detail.type === 'success') {
-      toastr.success(event.detail.message);
-    } else if (event.detail.type === 'error') {
-      toastr.error(event.detail.message);
-    } else if (event.detail.type === 'warning') {
-      toastr.warning(event.detail.message);
-    } else {
-      return false;
-    }
-  });
-</script>
+ 
+//  <script>
+//   window.addEventListener('showToastr', function(event) {
+//     toastr.remove();
+//     if (event.detail.type === 'info') {
+//       toastr.info(event.detail.message);
+//     } else if (event.detail.type === 'success') {
+//       toastr.success(event.detail.message);
+//     } else if (event.detail.type === 'error') {
+//       toastr.error(event.detail.message);
+//     } else if (event.detail.type === 'warning') {
+//       toastr.warning(event.detail.message);
+//     } else {
+//       return false;
+//     }
+//   });
+// </script> 
 
 
 

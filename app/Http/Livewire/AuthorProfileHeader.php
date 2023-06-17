@@ -9,7 +9,7 @@ class AuthorProfileHeader extends Component
 {
     public $author;
     
-    protected $listerners =[
+    protected $listeners =[
     'updateAuthorProfileHeader'=>'$refresh'
 
     ];
