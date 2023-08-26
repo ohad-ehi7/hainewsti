@@ -36,11 +36,11 @@ class AuthorPersonalDetails extends Component
 
         $this->emit('updateAuthorProfileHeader');
         $this->emit('updateTopHeader');
-        $this->showToast('Your Profile info has been successfully updated', 'Success');
+        $this->showToastr('Your Profile info has been successfully updated', 'success');
 
     }
-    public function showToast($message, $type){
-        return $this->dispatchBrowserEvent('showToast',[
+    public function showToastr($message, $type){
+        return $this->dispatchBrowserEvent('showToastr',[ 
             'type'=>$type,
             'message'=>$message
 
