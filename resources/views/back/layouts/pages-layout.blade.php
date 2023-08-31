@@ -14,6 +14,7 @@
     <link href="{{asset('/back/dist/css/tabler-vendors.min.css')}}" rel="stylesheet"/>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="stylesheet" href="{{ asset('back/dist/libs/ijaboCropTool/ijaboCropTool.min.css') }}">
+     
     
 
     
@@ -1424,12 +1425,12 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('back/dist/libs/ijaboCropTool/ijaboCropTool.min.js') }}"></script>
-    
+    <script src="{{ asset('back/dist/libs/ijaboViewer/jquery.ijaboViewer.min.js') }}"></script>
     
     <script src="{{ asset('/back/dist/libs/apexcharts/dist/apexcharts.min.js') }}" defer></script>
     <script src="{{ asset('/back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js') }}" defer></scrip>
     <script src="{{ asset('/back/dist/libs/jsvectormap/dist/maps/world.js') }}" defer></>
-    <script src="{{ asset('/back/dist/libs/jsvectormap/dist/maps/world-merc.js') }}" defer></script>
+    <script src="{{ asset('/back/dist/libs/jsvectormap/dist/maps/world-merc.js') }}" defer></scrip>
     <!-- Tabler Core -->
     <script src="{{ asset('/back/dist/js/tabler.min.js')}}" defer></script>
     <script src="{{ asset('/back/dist/js/demo.min.js')}}" defer></script>

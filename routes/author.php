@@ -26,6 +26,8 @@ Route::prefix('author')->name('author.')->group(function(){
       Route::post('/logout', [AuthorController::class, 'logout'])->name('logout');
       Route::view('/profile','back.pages.profile')->name('profile');
       Route::post('/change-profile-picture',[AuthorController::class,'changeProfilePicture'])->name('change-profile-picture');
+      Route::view('/setting','back.pages.settings')->name('settings');
+      Route::post('/change-blog-logo',[AuthorController::class,'changeBlogLogo'])->name('change-blog-logo');
     });
 
     
